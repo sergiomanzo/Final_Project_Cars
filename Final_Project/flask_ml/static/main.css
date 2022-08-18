@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  color: white;
+  font-size: 20px
+}
+
+.main_container{
+  margin: 30px;
+  border: 2px solid  rgb(184, 156, 32);
+  padding: 50px;
+}
+
+
+.header {
+  display: flex;  
+  justify-content: center;
+}
+
+.title{
+  color: rgb(184, 156, 32);
+  align-items: center;
+}
+
+.subtitle{
+  background-color:rgb(184, 156, 32);
+  align-items: center;
+}
+
+.subtitle_text{
+  padding: 10px;
+  font-size: 25px;
+}
+
+.form_container{
+  display: flex;  
+  justify-content: center;
+}
+
+.post_container{
+  margin-bottom: 20px;
+}
+
+.input_container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_submit{
+  margin-top: 10px;
+}
+
+.car_container{
+  width: 345px;
+}

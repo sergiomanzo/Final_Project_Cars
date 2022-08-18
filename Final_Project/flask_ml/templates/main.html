@@ -1,0 +1,111 @@
+ <!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/static/main.css">
+        
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        </head>
+<body>
+<main class="main_container">
+    <div class="header">
+        <h1 class="title">Car Price Predictor App</h1>
+    </div> 
+    <div class="subtitle">
+        <p class="subtitle_text">Fill the next car specs to complete price prediction</p>
+    </div>
+<div class="form_container">
+    <div class="car_container">
+        <h2>Car Specs</h2>    
+        <form method = "POST" class="post_container">
+            <div class="input_container">
+                <label for="year">Year</label>
+                <select name="Year" id="year">
+                    <option value="2014" selected>2014</option>
+                    <option value="2015">2015</option>
+                    <option value="2016">2016</option>
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                </select>
+            </div>
+            <div class="input_container">
+                <label for="makers">Maker</label>
+                <select name="makers" id="makers" method="GET" action="/ml">
+                    {% for maker in makers %}
+                    <option value= "{{maker}}" SELECTED>{{maker}}</option>"
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="input_container">
+                <label for="HP"> HP</label>
+                <input type="number" name="HP" id="HP" required="required" pattern="{1,20}">
+            </div>
+            <div class="input_container">
+                <label for="Kilometers"> Kilometers (Km)</label>
+                <input type="number" name="Kilometers" id="Kilometers" required="required" pattern="{1,20}">
+            </div>
+            <div class="input_container">
+                <label for="Automatic_Manual"> Automatic/Manual</label>                
+                <select name="Automatic_Manual" id="Automatic_Manual">
+                    <option value="Manual" selected>Manual</option>
+                    <option value="Automatic">Automatic</option>
+                </select>
+            </div>
+            <div class="input_container">
+                <label for="Segmet_ABCDEF">Segment</label>
+                <select name="Segmet_ABCDEF" id="Segmet_ABCDEF">
+                    <option value="A" selected>A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="input_container">
+                <label for="Fuel"> Fuel</label>
+                <select name="Fuel" id="Fuel">
+                    <option value="Gasoline" selected>Gasoline</option>
+                    <option value="Diesel">Diesel</option>
+                </select>
+            </div>
+            <div class="input_container">
+                <label for="Max_vel"> Max velocity</label>  
+                <input type="number" name="Max_vel" id="Max_vel" required="required" pattern="{1,20}">
+            </div>
+            <div class="input_container">
+                <label for="Cylindernumber"> Cylinder number</label>
+                <select name="Cylindernumber" id="Cylindernumber">
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4" >4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Predict price" class="button_submit">        
+            </div>
+        </form>
+    </div>
+
+</div> 
+
+<div class="subtitle">
+    <p class="subtitle_text">The price for the model you are looking for is:</p>
+</div>
+<p>  {{my_result}} </p>
+
+</main>
+
+
+
+</body>
+
+
+</html>
