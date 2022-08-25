@@ -1,6 +1,6 @@
 # Final_Project_Cars
 Introduction: This is an end-to-end analysis of used cars in Spain. It includes: 1; ETA 2; EDA 3; Tableau visualization (https://public.tableau.com/app/profile/sergio6080/viz/SecondhandcarsFinalProyect/FP?publish=yes) 4; Price predictor app.
-
+Presentation:https://docs.google.com/presentation/d/1_ITZjGJTpLLUplaK6BSL-e-NtU7w1DjRAMUAJOTcvd4/edit?usp=sharing
 The data was extracted by web scraping from https://www.autocasion.com/ and used an XGBoost Machine Learning model to predict prices given the features.
 
 Business case Sometimes is hard to find a way how to start analyzing cars when you want to buy one. Even if you have access to a marketplace and you can filter by the specs you are looking for you get this kind of issue: What is the average mileage for the car I'm looking for from all of the cars? How much is too much millage? How can I compare them between all the options, and how to know if the relationship between price/mileage is the best? What if I'm looking for a specific car not available at the moment? What would be the price market?
